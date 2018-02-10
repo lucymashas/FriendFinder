@@ -14,173 +14,289 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-       
-      label{
-        display: block;
-      }
-      .input-group {
-        padding: 10px;
-      }
-      
+        *{
+            color: #0d0903;
+        }
+        .navbar {
+            border-radius: 0;
+        }
+        .container{
+            width:100%;
+            margin: 0 auto;
+        }
+        .container h2{
+            text-align: center;
+        }
+        section {
+            width:70%;
+            max-width: 700px;
+            margin:0 auto;
+            border: 1px solid #eeeeee;
+        }
+        section .questions{
+            padding-left: 30px;
+        }
+        hr{
+            width:76%;
+            padding:0 12px;
+        }
+        label{
+            display: block;
+            padding-right: 40px;
+        }
+        .input-group {
+            padding: 15px;
+        }
+        .input-group:last-child{
+            margin-bottom:20px;
+        }
+        #userinfo{
+            height: 55px;
+            border-bottom: 1px solid #e5e5e5;
+            background-color:#f6f6f6;
+        }
+        .close{
+            padding-right:10px;
+        }
+        h3 {
+            margin: 0;
+            padding: 10px 15px;
+             font: normal 22px/35px "Oswald",sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h2>ABOUT YOU</h2>
-    <form>
-      <div class="row">
-        <div class="col-lg-6">
-            <div class=input-group>
-                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
-                </span>
-                <input type="text" id="fname" placeholder="Enter Full Name" class="form-control">
-            </div>
-              
-            <div class=input-group>
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span>
-                  </span>
-                  <input type="text" id="fphotoUrl" placeholder="Enter Photo URL" class="form-control">
-            </div>
-        </div>
-      </div>
+    <div class="modal fade" id="dataModal">
+            <div class="modal-dialog">
+                    <div class="modal-content">
+                        <span class="close" data-dismiss="modal" id="dataInfo">&times;</span>
+                        <div id="userinfo">
+                            <h3>Friend Result</h3>
+                        </div>
+                    <div class="modal-body">
         
-
-        <div class="row"
-          <div class ="col-lg-6">
-                  <label>You love the outdoors; Would perfer to spend most of your time doing outdoor activities.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q1" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q1" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q1" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q1" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q1" value='5'> 5 </label></div>
+                    </div>
+                </div> <!-- end of modal content -->
+            </div> <!-- end of modal dialog -->
+    </div>
+    <nav class="navbar navbar-inverse">
+            <div class="container">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Friend Finder</a>
               </div>
-              <hr>
-              <div>
-                  <label>You rarely do something just out of sheer curiosity.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q2" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q2" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q2" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q2" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q2" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>Do you like Music? Are you like super into music.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q3" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q3" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q3" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q3" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q3" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>You enjoy fitness and sports activities</label>
-                  <div class="radio-inline"><label><input type="radio" name="q4" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q4" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q4" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q4" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q4" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>You love the movies and love watching in the big screen.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q5" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q5" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q5" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q5" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q5" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>Your mind is always buzzing with unexplored ideas and plans.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q6" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q6" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q6" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q6" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q6" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>You love trying new restaurants and foods</label>
-                  
-                  <div class="radio-inline"><label><input type="radio" name="q7" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q7" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q7" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q7" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q7" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>You feel more energetic after spending time with a group of people.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q8" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q8" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q8" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q8" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q8" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q9" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q9" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q9" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q9" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q9" value='5'> 5 </label></div>
-              </div>
-              <hr>
-              <div>
-                  <label>Your passionate about your work and love sharing your outlook with others.</label>
-                  <div class="radio-inline"><label><input type="radio" name="q10" value='1'> 1 (Strongly Disagree)</label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q10" value='2'> 2 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q10" value='3'> 3 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q10" value='4'> 4 </label></div>
-                  <div class="radio-inline"><label><input type="radio" name="q10" value='5'> 5 </label></div>
-              </div>
-              <hr>
-          </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+              </ul>
+            </div>
+          </nav>
+  <div class="container">
+      <h2>ABOUT YOU</h2>
+    <section>
+    <form>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class=input-group>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+                    </span>
+                    <input type="text" id="fname" placeholder="Enter Full Name" class="form-control">
+                </div>
+                
+                <div class=input-group>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span>
+                    </span>
+                    <input type="text" id="fphotoUrl" placeholder="Enter Photo URL" class="form-control">
+                </div>
+            </div>
         </div>
-      </div>
-      <button type="submit" class="btn btn-primary submit">Submit</button>
+            
+    
+        <div class="row questions">
+            <div class ="col-lg-6">
+                <div>
+                    <label>You love the outdoors; Would perfer to spend most of your time doing outdoor activities.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q1" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q1" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q1" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q1" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q1" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You rarely do something just out of sheer curiosity.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q2" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q2" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q2" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q2" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q2" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>Do you like Music? Are you like super into music.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q3" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q3" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q3" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q3" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q3" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You enjoy fitness and sports activities</label>
+                    <div class="radio-inline"><label><input type="radio" name="q4" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q4" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q4" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q4" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q4" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You love the movies and love watching in the big screen.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q5" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q5" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q5" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q5" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q5" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>Your mind is always buzzing with unexplored ideas and plans.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q6" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q6" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q6" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q6" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q6" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You love trying new restaurants and foods</label>
+                    
+                    <div class="radio-inline"><label><input type="radio" name="q7" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q7" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q7" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q7" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q7" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You feel more energetic after spending time with a group of people.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q8" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q8" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q8" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q8" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q8" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q9" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q9" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q9" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q9" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q9" value='5'> 5 </label></div>
+                </div>
+                <hr>
+                <div>
+                    <label>Your passionate about your work and love sharing your outlook with others.</label>
+                    <div class="radio-inline"><label><input type="radio" name="q10" value='1'> 1 (Strongly Disagree)</label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q10" value='2'> 2 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q10" value='3'> 3 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q10" value='4'> 4 </label></div>
+                    <div class="radio-inline"><label><input type="radio" name="q10" value='5'> 5 </label></div>
+                </div>
+                <hr>
+            </div>
+         </div>
+         <div class="row">
+                <div class="col-lg-6">
+                    <button type="submit" class="btn btn-primary btn-block submit">Submit</button>
+                </div>
+            </div>
     </form>
+    </section>
+  </div>
   </body>
 </html>
+
+
 <script type="text/javascript">
+
+    function compare(userScores,tableScores){
+        console.log("Current User Scores " + userScores, "Comparing Against " + tableScores)
+        var totalDiff = 0;
+        for (var i=0; i<userScores.length;i++) {
+                if(userScores[i] != tableScores[i]){
+                totalDiff = (Math.abs(userScores[i] - tableScores[i])) + totalDiff
+                }
+            }
+        return totalDiff;
+        }  
+
+
 
     // On Submit -  "POSTS" our form data 
     // grabs all of the fields then sends a post request to our api
     // Our api recognizes the route (/api/friends)... and then runs the associated code (found in api-friends.js).
 
+    var currentURL = window.location.origin;
+
     $(".submit").on("click", function(event) {
-      event.preventDefault();
-      $(".error").remove();
-      var personScores = [];
-      for(var i=0;i<10;i++){
-            var qresponseSelector = `input[name="q${i+1}"]:checked`;
-            var responseValue = $(qresponseSelector).val();
-            if (!responseValue){
-                var errMsg = "<div class='error'><p>Missing Entry in Questionaire</p></div>"
-                $(".row").before(errMsg);
-                $(document).scrollTop(0);
-                return;
+        event.preventDefault();
+        $(".error").remove();
+        var personScores = [];
+
+        for(var i=0;i<10;i++){
+                var qresponseSelector = `input[name="q${i+1}"]:checked`;
+                var responseValue = $(qresponseSelector).val();
+                if (!responseValue){
+                    var errMsg = "<div class='error alert alert-danger'><p>All questions need to be answer.  Please review questions for missing response.</p></div>"
+                    $(".questions").before(errMsg);
+                    $(document).scrollTop(0);
+                    return;
+                }
+            personScores.push(responseValue);
             }
-        personScores.push(responseValue);
-        }
-    var newFriend = {
-        personFullName: $("#fname").val().trim(),
-        personPhotourl: $("#fphotoUrl").val().trim(),
-        personScores:personScores
-    };
-
-    console.log(newFriend);
-
-    $.post("/api/tables", newFriend,
-        function(data) {
-          // Clear the form when submitting
-          $("#fname").val(""),
-          $("#fphotoUrl").val(""),
-          $('input[type=radio]:checked').attr('checked', false);
-        });
+            $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+            .done(function(friendData) {
+                var diff = {};
+                for (var i = 0; i < friendData.length; i++) {
+                    var scoreArray = friendData[i].personScores;
+                    var totaldiff = compare(personScores,scoreArray);
+                    if ($.isEmptyObject(diff)){
+                        console.log("empty");
+                        diff['name'] = friendData[i].personFullName;
+                        diff['totaldiff'] = totaldiff;
+                        diff['photo'] = friendData[i].personPhotoUrl;
+                    }else{
+                        if (Object.keys(diff).length > 0){
+                            if (diff.totaldiff > totaldiff){
+                            diff['name'] = friendData[i].personFullName;
+                            diff['totaldiff'] = totaldiff;
+                            diff['photo'] = friendData[i].personPhotoUrl;
+                            }
+                        }
+                    }
+                }
+                console.log(diff);
+                var modalContent = `<p>Friends Name:   ${diff.name}</p><br>
+                                    <p>Photo Information: <a href='${diff.photo}'></a></p>`
+                $(".modal-body").append(modalContent); 
+                $('#dataModal').modal({show: 'false'});
+            })
         
-    });
-
+//Create new Friend
+            var newFriend = {
+                personFullName: $("#fname").val().trim(),
+                personPhotourl: $("#fphotoUrl").val().trim(),
+                personScores: personScores
+            };
+   
+        $.post("/api/friends", newFriend,
+            function(data) {
+            // Clear the form when submitting
+                $("#fname").val(""),
+                $("#fphotoUrl").val(""),
+                $('input[type=radio]:checked').attr('checked', false);
+            });
+        });
 </script>
