@@ -278,8 +278,9 @@
                     }
                 }
                 console.log(diff);
-                var modalContent = `<p>Friends Name:   ${diff.name}</p><br>
-                                    <p>Photo Information: <a href='${diff.photo}'></a></p>`
+                var modalContent = `<p>Friends Name:&mbs;&nbsp;${diff.name}</p><br>
+                                    <p>Photo Information:&mbs;&nbsp;<img src='${diff.photo}' alt='${diff.name}' style="width:100px;height:100px;"></p>
+                                    <p><a href='${diff.photo}'>Image Link</a></p>`
                 $(".modal-body").append(modalContent); 
                 $('#dataModal').modal({show: 'false'});
             })
