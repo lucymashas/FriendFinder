@@ -8,7 +8,12 @@ var friendTable = [
     personFullName: "Kyle Brown",
     personPhotourl: "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png",
     personScores: ['4','1','2','3','2','2','1','3','2','3']
-  }
+  },
+  {
+    personFullName: "Lucy Mash",
+    personPhotourl: "https://avatarfiles.alphacoders.com/115/115265.png",
+    personScores: ['4','3','3','4','4','4','4','3','2','4']
+  },
 ];
 
 // Note how we export the array. This makes it accessible to other files using require.
