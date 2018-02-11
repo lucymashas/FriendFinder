@@ -266,20 +266,20 @@
                         console.log("empty");
                         diff['name'] = friendData[i].personFullName;
                         diff['totaldiff'] = totaldiff;
-                        diff['photo'] = friendData[i].personPhotoUrl;
+                        diff['photo'] = friendData[i].personPhotourl;
                     }else{
                         if (Object.keys(diff).length > 0){
                             if (diff.totaldiff > totaldiff){
                             diff['name'] = friendData[i].personFullName;
                             diff['totaldiff'] = totaldiff;
-                            diff['photo'] = friendData[i].personPhotoUrl;
+                            diff['photo'] = friendData[i].personPhotourl;
                             }
                         }
                     }
                 }
                 console.log(diff);
-                var modalContent = `<p>Friends Name:&mbs;&nbsp;${diff.name}</p><br>
-                                    <p>Photo Information:&mbs;&nbsp;<img src='${diff.photo}' alt='${diff.name}' style="width:100px;height:100px;"></p>
+                var modalContent = `<p>Friends Name:&nbsp;&nbsp;${diff.name}</p><br>
+                                    <p>Photo Information:&nbsp;&nbsp;<img src='${diff.photo}' alt='${diff.name}' style="width:100px;height:100px;"></p>
                                     <p><a href='${diff.photo}'>Image Link</a></p>`
                 $(".modal-body").append(modalContent); 
                 $('#dataModal').modal({show: 'false'});
